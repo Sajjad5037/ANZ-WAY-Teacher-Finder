@@ -10,23 +10,14 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen">
-        {/* Navbar */}
-        <Navbar />
-
-        {/* Main Content */}
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/courses" element={<Courses />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-
-        {/* Footer */}
-        <Footer />
-      </div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/courses" element={<Courses />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer />
     </Router>
   );
 }
