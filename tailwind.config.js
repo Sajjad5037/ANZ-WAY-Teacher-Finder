@@ -4,11 +4,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#f97316', // Homebridge orange
-        secondary: '#1f2937', // dark gray for text
-      },
-      fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
+        primary: '#7C3AED', // Homebridge purple (example hex)
+        secondary: '#6B21A8', // darker purple for hover or accents
+        lightPurple: '#EDE9FE', // light background for sections
       },
     },
   },
