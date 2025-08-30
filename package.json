@@ -9,6 +9,10 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "engines": {
+  "node": ">=18.x",
+  "npm": ">=9.x"
+  },
   "devDependencies": {
     "tailwindcss": "^4.1.12",
     "postcss": "^8.5.6",
