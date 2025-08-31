@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
-    <div className="bg-lightPurple min-h-screen">
+    <div className="bg-white min-h-screen">
 
       {/* Hero Section */}
       <section className="bg-primary text-white py-20">
@@ -16,7 +16,7 @@ export default function Home() {
           </p>
           <Link
             to="/courses"
-            className="bg-secondary hover:bg-white hover:text-primary text-white px-6 py-3 rounded-lg font-semibold transition"
+            className="bg-white text-primary font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition"
           >
             Browse Courses
           </Link>
@@ -30,7 +30,7 @@ export default function Home() {
             Our Services
           </h2>
           <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
+
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition">
               <h3 className="text-xl font-semibold mb-2 text-primary">Online Courses</h3>
               <p className="text-gray-700">
@@ -65,7 +65,7 @@ export default function Home() {
           </p>
           <Link
             to="/contact"
-            className="bg-secondary hover:bg-white hover:text-primary px-6 py-3 rounded-lg font-semibold transition"
+            className="bg-white text-primary font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition"
           >
             Contact Us
           </Link>
