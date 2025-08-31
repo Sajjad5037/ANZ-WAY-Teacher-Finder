@@ -10,14 +10,25 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/courses" element={<Courses />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <Footer />
+      {/* Navbar with purple background */}
+      <div className="bg-primary text-white">
+        <Navbar />
+      </div>
+
+      {/* Main content area with light purple background */}
+      <div className="bg-lightPurple min-h-screen">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
+
+      {/* Footer with dark purple background */}
+      <div className="bg-secondary text-white">
+        <Footer />
+      </div>
     </Router>
   );
 }
