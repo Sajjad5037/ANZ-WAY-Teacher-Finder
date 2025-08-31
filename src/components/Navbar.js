@@ -12,11 +12,11 @@ export default function Navbar() {
           {/* Logo */}
       <div className="flex-shrink-0">
         <Link to="/">
-          <img
-            src="/logo.jpg"       // <-- directly use the path from public
-            alt="ANZ-WAY Logo"
-            className="h-10 w-auto"
-          />
+           <img
+                src="/logo.jpg"       // logo in public folder
+                alt="ANZ-WAY Logo"
+                className="h-16 w-auto"
+            />
         </Link>
       </div>
           {/* Desktop Menu */}
