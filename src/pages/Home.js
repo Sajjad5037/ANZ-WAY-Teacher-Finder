@@ -31,12 +31,13 @@ export default function Home() {
           </h2>
           <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            <div className="bg-primary text-white rounded-lg p-6 border-4 border-[#FD9C3D] hover:bg-[#FD9C3D] transition-colors duration-300 shadow-md hover:shadow-xl">
+            <div className="bg-primary text-white rounded-lg p-6 border-r-4 border-b-4 border-[#FD9C3D] hover:bg-[#FD9C3D] transition-colors duration-300 shadow-md hover:shadow-xl">
               <h3 className="text-xl font-semibold mb-2">Online Courses</h3>
               <p className="text-white">
                 Access a variety of courses to learn at your own pace.
               </p>
             </div>
+
 
 
             <div className="bg-primary text-white rounded-lg p-6 hover:bg-[#FD9C3D] transition-colors duration-300 shadow-md hover:shadow-xl">
