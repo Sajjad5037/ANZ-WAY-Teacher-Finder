@@ -10,10 +10,12 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <Router>
-      {/* Navbar with purple background */}
-      <div className="bg-primary text-white">
+      
+      {/* Navbar with white background */}
+      <div className="bg-white text-primary">
         <Navbar />
       </div>
+
 
       {/* Main content area with light purple background */}
       <div className="bg-lightPurple min-h-screen">
