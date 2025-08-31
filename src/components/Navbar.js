@@ -69,11 +69,12 @@ export default function Navbar() {
               </Link>
 
               {/* Desktop Menu */}
-              <ul className="hidden md:flex space-x-6 items-center">
+              
+              <ul className="hidden md:flex space-x-6 items-center font-poppins">
                 <li>
                   <Link
                     to="/"
-                    className="px-3 py-2 rounded hover:text-primary-dark font-bold transition-colors duration-300"
+                    className="px-3 py-2 rounded hover:text-primary-dark font-semibold transition-colors duration-300"
                   >
                     Home
                   </Link>
@@ -81,7 +82,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     to="/courses"
-                    className="px-3 py-2 rounded hover:text-primary-dark font-bold transition-colors duration-300"
+                    className="px-3 py-2 rounded hover:text-primary-dark font-semibold transition-colors duration-300"
                   >
                     Courses
                   </Link>
@@ -89,7 +90,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     to="/about"
-                    className="px-3 py-2 rounded hover:text-primary-dark font-bold transition-colors duration-300"
+                    className="px-3 py-2 rounded hover:text-primary-dark font-semibold transition-colors duration-300"
                   >
                     About Us
                   </Link>
@@ -97,12 +98,21 @@ export default function Navbar() {
                 <li>
                   <Link
                     to="/contact"
-                    className="px-3 py-2 rounded hover:text-primary-dark font-bold transition-colors duration-300"
+                    className="px-3 py-2 rounded hover:text-primary-dark font-semibold transition-colors duration-300"
                   >
                     Contact
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    to="/why-homebridge"
+                    className="px-3 py-2 rounded hover:text-primary-dark font-semibold transition-colors duration-300"
+                  >
+                    Why Homebridge
+                  </Link>
+                </li>
               </ul>
+
             </div>
 
             {/* Mobile Menu Button */}
