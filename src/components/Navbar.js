@@ -5,7 +5,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-blue-600 text-white shadow-md">
+    <nav className="bg-primary text-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
@@ -17,10 +17,18 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6">
-            <Link to="/" className="hover:underline">Home</Link>
-            <Link to="/courses" className="hover:underline">Courses</Link>
-            <Link to="/about" className="hover:underline">About</Link>
-            <Link to="/contact" className="hover:underline">Contact</Link>
+            <Link to="/" className="hover:underline hover:text-secondary transition">
+              Home
+            </Link>
+            <Link to="/courses" className="hover:underline hover:text-secondary transition">
+              Courses
+            </Link>
+            <Link to="/about" className="hover:underline hover:text-secondary transition">
+              About
+            </Link>
+            <Link to="/contact" className="hover:underline hover:text-secondary transition">
+              Contact
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -58,17 +66,29 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-blue-700 px-2 pt-2 pb-3 space-y-1">
-          <Link to="/" className="block px-3 py-2 rounded hover:bg-blue-800">
+        <div className="md:hidden bg-secondary px-2 pt-2 pb-3 space-y-1">
+          <Link
+            to="/"
+            className="block px-3 py-2 rounded hover:bg-primary hover:text-white transition"
+          >
             Home
           </Link>
-          <Link to="/courses" className="block px-3 py-2 rounded hover:bg-blue-800">
+          <Link
+            to="/courses"
+            className="block px-3 py-2 rounded hover:bg-primary hover:text-white transition"
+          >
             Courses
           </Link>
-          <Link to="/about" className="block px-3 py-2 rounded hover:bg-blue-800">
+          <Link
+            to="/about"
+            className="block px-3 py-2 rounded hover:bg-primary hover:text-white transition"
+          >
             About
           </Link>
-          <Link to="/contact" className="block px-3 py-2 rounded hover:bg-blue-800">
+          <Link
+            to="/contact"
+            className="block px-3 py-2 rounded hover:bg-primary hover:text-white transition"
+          >
             Contact
           </Link>
         </div>
