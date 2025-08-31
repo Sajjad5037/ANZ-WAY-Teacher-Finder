@@ -9,7 +9,7 @@ export default function Home() {
       <section className="bg-primary text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-            Welcome to Homebridge Clone
+            Welcome to ANZWAY Academy
           </h1>
           <p className="text-lg sm:text-xl mb-8">
             Explore courses, learn new skills, and grow your career with us.
