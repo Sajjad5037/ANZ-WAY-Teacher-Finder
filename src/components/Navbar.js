@@ -7,10 +7,26 @@ export default function Navbar() {
   return (
     <>
       {/* Top Strip */}
+      
       <div className="bg-gray-800 text-white text-sm py-2 px-4 flex justify-between items-center">
-        {/* Left side: Phone number */}
-        <div>
-          📞 Call us: <a href="tel:+923001234567" className="hover:underline">+92 300 1234567</a>
+        {/* Left side: Phone number with icon */}
+        <div className="flex items-center space-x-1">
+          <svg
+            className="w-4 h-4 text-white"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3 5a2 2 0 012-2h2.5a1 1 0 011 1v2.5a1 1 0 01-.293.707l-1.414 1.414a16 16 0 006.586 6.586l1.414-1.414A1 1 0 0117.5 15H20a1 1 0 011 1V20a2 2 0 01-2 2h-1C9.163 22 2 14.837 2 6V5z"
+            />
+          </svg>
+          <a href="tel:+923255588823" className="hover:underline">
+            +92 325 5588823
+          </a>
         </div>
 
         {/* Right side: Social media links */}
