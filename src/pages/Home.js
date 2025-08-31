@@ -31,9 +31,9 @@ export default function Home() {
           </h2>
           <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition">
-              <h3 className="text-xl font-semibold mb-2 text-primary">Online Courses</h3>
-              <p className="text-gray-700">
+            <div className="bg-primary text-white rounded-lg p-6 hover:bg-[#FD9C3D] transition-colors duration-300 shadow-md hover:shadow-xl">
+              <h3 className="text-xl font-semibold mb-2">Online Courses</h3>
+              <p className="text-white">
                 Access a variety of courses to learn at your own pace.
               </p>
             </div>
