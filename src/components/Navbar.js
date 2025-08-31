@@ -108,7 +108,7 @@ export default function Navbar() {
                     to="/why-homebridge"
                     className="px-3 py-2 rounded hover:text-primary-dark font-semibold transition-colors duration-300"
                   >
-                    Why Homebridge
+                    Why ANZWAY
                   </Link>
                 </li>
               </ul>
