@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#9b51e0',         // Homebridge purple
-        'primary-dark': '#872dcf',   // slightly darker for hover
+        primary: '#361e54',         // Homebridge purple
+        'primary-dark': '#2a1740',   // slightly darker for hover
         secondary: '#ffffff',        // white for text/icons
       },
     },
