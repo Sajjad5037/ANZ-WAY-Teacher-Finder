@@ -38,16 +38,17 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition">
-              <h3 className="text-xl font-semibold mb-2 text-primary">Expert Instructors</h3>
-              <p className="text-gray-700">
+            <div className="bg-primary text-white rounded-lg p-6 hover:bg-[#FD9C3D] transition-colors duration-300 shadow-md hover:shadow-xl">
+              <h3 className="text-xl font-semibold mb-2">Expert Instructors</h3>
+              <p className="text-white">
                 Learn from industry experts and gain practical knowledge.
               </p>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition">
-              <h3 className="text-xl font-semibold mb-2 text-primary">Certifications</h3>
-              <p className="text-gray-700">
+
+            <div className="bg-primary text-white rounded-lg p-6 hover:bg-[#FD9C3D] transition-colors duration-300 shadow-md hover:shadow-xl">
+              <h3 className="text-xl font-semibold mb-2">Certifications</h3>
+              <p className="text-white">
                 Earn certificates to showcase your skills and achievements.
               </p>
             </div>
