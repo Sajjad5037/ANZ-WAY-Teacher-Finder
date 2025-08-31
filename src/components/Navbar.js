@@ -10,7 +10,7 @@ export default function Navbar() {
       <div className="bg-gray-800 text-white text-sm py-2 px-4 flex justify-between items-center">
         {/* Left side: Phone number */}
         <div>
-          📞 Call us: <a href="tel:+923255588823" className="hover:underline">+0325-5588823</a>
+          📞 Call us: <a href="tel:+923001234567" className="hover:underline">+92 300 1234567</a>
         </div>
 
         {/* Right side: Social media links */}
@@ -160,3 +160,6 @@ export default function Navbar() {
           </ul>
         )}
       </nav>
+    </>
+  );
+}
