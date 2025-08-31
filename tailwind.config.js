@@ -1,14 +1,11 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 module.exports = {
-  content: ["./src/**/*.{js,jsx}"],
   theme: {
     extend: {
       colors: {
-        primary: '#7C3AED', // Homebridge purple (example hex)
-        secondary: '#6B21A8', // darker purple for hover or accents
-        lightPurple: '#EDE9FE', // light background for sections
+        primary: '#9b51e0', // Homebridge purple
+        secondary: '#ffffff', // white or accent
       },
     },
   },
-  plugins: [],
 };
