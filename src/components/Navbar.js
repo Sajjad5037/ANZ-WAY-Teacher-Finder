@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import logo from './assets/logo.png'; // replace with your logo path
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,8 +11,12 @@ export default function Navbar() {
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="text-2xl font-bold text-primary">
-              Homebridge Clone
+            <Link to="/">
+              <img
+                src={logo}
+                alt="Homebridge Logo"
+                className="h-10 w-auto"
+              />
             </Link>
           </div>
 
@@ -20,7 +25,7 @@ export default function Navbar() {
             <li>
               <Link
                 to="/"
-                className="px-3 py-2 rounded hover:text-primary-dark font-bold"
+                className="px-3 py-2 rounded hover:text-primary-dark font-bold transition-colors duration-300"
               >
                 Home
               </Link>
@@ -28,7 +33,7 @@ export default function Navbar() {
             <li>
               <Link
                 to="/courses"
-                className="px-3 py-2 rounded hover:text-primary-dark font-bold"
+                className="px-3 py-2 rounded hover:text-primary-dark font-bold transition-colors duration-300"
               >
                 Courses
               </Link>
@@ -39,11 +44,11 @@ export default function Navbar() {
               <div className="flex items-center">
                 <Link
                   to="/about"
-                  className="px-3 py-2 rounded hover:text-primary-dark font-bold flex items-center"
+                  className="px-3 py-2 rounded hover:text-primary-dark flex items-center font-bold transition-colors duration-300"
                 >
                   About Us
                   <svg
-                    className="w-4 h-4 ml-1"
+                    className="w-4 h-4 ml-1 transform transition-transform duration-300 group-hover:rotate-180"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -57,11 +62,11 @@ export default function Navbar() {
               </div>
 
               {/* Dropdown Menu */}
-              <ul className="absolute left-0 mt-1 hidden group-hover:block bg-white shadow-lg rounded-md min-w-[150px] z-10">
+              <ul className="absolute left-0 mt-1 hidden group-hover:block bg-white shadow-lg rounded-md min-w-[150px] z-10 transition-all duration-300">
                 <li>
                   <Link
                     to="/about/team"
-                    className="block px-4 py-2 hover:bg-gray-100 font-normal"
+                    className="block px-4 py-2 hover:bg-gray-100 font-normal transition-colors duration-200"
                   >
                     Our Team
                   </Link>
@@ -69,7 +74,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     to="/about/mission"
-                    className="block px-4 py-2 hover:bg-gray-100 font-normal"
+                    className="block px-4 py-2 hover:bg-gray-100 font-normal transition-colors duration-200"
                   >
                     Our Mission
                   </Link>
@@ -80,7 +85,7 @@ export default function Navbar() {
             <li>
               <Link
                 to="/contact"
-                className="px-3 py-2 rounded hover:text-primary-dark font-bold"
+                className="px-3 py-2 rounded hover:text-primary-dark font-bold transition-colors duration-300"
               >
                 Contact
               </Link>
@@ -94,7 +99,7 @@ export default function Navbar() {
               className="focus:outline-none"
             >
               <svg
-                className="w-6 h-6"
+                className="w-6 h-6 transition-transform duration-300"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -122,11 +127,11 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <ul className="md:hidden bg-white px-2 pt-2 pb-3 space-y-1 shadow-md">
+        <ul className="md:hidden bg-white px-2 pt-2 pb-3 space-y-1 shadow-md transition-all duration-300">
           <li>
             <Link
               to="/"
-              className="block px-3 py-2 rounded hover:bg-gray-100 font-bold"
+              className="block px-3 py-2 rounded hover:bg-gray-100 font-bold transition-colors duration-300"
             >
               Home
             </Link>
@@ -134,7 +139,7 @@ export default function Navbar() {
           <li>
             <Link
               to="/courses"
-              className="block px-3 py-2 rounded hover:bg-gray-100 font-bold"
+              className="block px-3 py-2 rounded hover:bg-gray-100 font-bold transition-colors duration-300"
             >
               Courses
             </Link>
@@ -142,7 +147,7 @@ export default function Navbar() {
           <li>
             <Link
               to="/about"
-              className="block px-3 py-2 rounded hover:bg-gray-100 font-bold"
+              className="block px-3 py-2 rounded hover:bg-gray-100 font-bold transition-colors duration-300"
             >
               About Us
             </Link>
@@ -150,7 +155,7 @@ export default function Navbar() {
           <li>
             <Link
               to="/contact"
-              className="block px-3 py-2 rounded hover:bg-gray-100 font-bold"
+              className="block px-3 py-2 rounded hover:bg-gray-100 font-bold transition-colors duration-300"
             >
               Contact
             </Link>
