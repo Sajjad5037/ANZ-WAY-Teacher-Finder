@@ -40,20 +40,20 @@ export default function Home() {
 
 
 
-            <div className="bg-primary text-white rounded-lg p-6 hover:bg-[#FD9C3D] transition-colors duration-300 shadow-md hover:shadow-xl">
-              <h3 className="text-xl font-semibold mb-2">Expert Instructors</h3>
-              <p className="text-white">
-                Learn from industry experts and gain practical knowledge.
-              </p>
-            </div>
+           <div className="bg-primary text-white rounded-lg p-6 border-r-4 border-b-4 border-[#FD9C3D] hover:bg-[#FD9C3D] transition-colors duration-300 shadow-md hover:shadow-xl">
+            <h3 className="text-xl font-semibold mb-2">Expert Instructors</h3>
+            <p className="text-white">
+              Learn from industry experts and gain practical knowledge.
+            </p>
+          </div>
+          
+          <div className="bg-primary text-white rounded-lg p-6 border-r-4 border-b-4 border-[#FD9C3D] hover:bg-[#FD9C3D] transition-colors duration-300 shadow-md hover:shadow-xl">
+            <h3 className="text-xl font-semibold mb-2">Certifications</h3>
+            <p className="text-white">
+              Earn certificates to showcase your skills and achievements.
+            </p>
+          </div>
 
-
-            <div className="bg-primary text-white rounded-lg p-6 hover:bg-[#FD9C3D] transition-colors duration-300 shadow-md hover:shadow-xl">
-              <h3 className="text-xl font-semibold mb-2">Certifications</h3>
-              <p className="text-white">
-                Earn certificates to showcase your skills and achievements.
-              </p>
-            </div>
 
           </div>
         </div>
