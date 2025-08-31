@@ -5,23 +5,70 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-primary text-secondary shadow-md">
+    <nav className="bg-white text-primary shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="text-2xl font-bold">
+            <Link to="/" className="text-2xl font-bold text-primary">
               Homebridge Clone
             </Link>
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-6">
-            <Link to="/" className="hover:text-primary-dark">Home</Link>
-            <Link to="/courses" className="hover:text-primary-dark">Courses</Link>
-            <Link to="/about" className="hover:text-primary-dark">About</Link>
-            <Link to="/contact" className="hover:text-primary-dark">Contact</Link>
-          </div>
+          <ul className="hidden md:flex space-x-6">
+            <li>
+              <Link
+                to="/"
+                className="hover:text-primary-dark px-3 py-2 rounded"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/courses"
+                className="hover:text-primary-dark px-3 py-2 rounded"
+              >
+                Courses
+              </Link>
+            </li>
+            <li className="relative group">
+              <Link
+                to="/about"
+                className="hover:text-primary-dark px-3 py-2 rounded flex items-center"
+              >
+                About Us
+              </Link>
+              {/* Example of submenu */}
+              <ul className="absolute left-0 mt-1 hidden group-hover:block bg-white shadow-lg rounded-md min-w-[150px] z-10">
+                <li>
+                  <Link
+                    to="/about/team"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Our Team
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/about/mission"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Our Mission
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <Link
+                to="/contact"
+                className="hover:text-primary-dark px-3 py-2 rounded"
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
@@ -58,12 +105,40 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-primary px-2 pt-2 pb-3 space-y-1">
-          <Link to="/" className="block px-3 py-2 rounded hover:bg-primary-dark">Home</Link>
-          <Link to="/courses" className="block px-3 py-2 rounded hover:bg-primary-dark">Courses</Link>
-          <Link to="/about" className="block px-3 py-2 rounded hover:bg-primary-dark">About</Link>
-          <Link to="/contact" className="block px-3 py-2 rounded hover:bg-primary-dark">Contact</Link>
-        </div>
+        <ul className="md:hidden bg-white px-2 pt-2 pb-3 space-y-1 shadow-md">
+          <li>
+            <Link
+              to="/"
+              className="block px-3 py-2 rounded hover:bg-gray-100"
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/courses"
+              className="block px-3 py-2 rounded hover:bg-gray-100"
+            >
+              Courses
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/about"
+              className="block px-3 py-2 rounded hover:bg-gray-100"
+            >
+              About Us
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/contact"
+              className="block px-3 py-2 rounded hover:bg-gray-100"
+            >
+              Contact
+            </Link>
+          </li>
+        </ul>
       )}
     </nav>
   );
