@@ -1,45 +1,77 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
-  const courses = [
-    { id: 1, title: "Mathematics", description: "A-Level Mathematics course for beginners to advanced." },
-    { id: 2, title: "Physics", description: "Comprehensive A-Level Physics course with practical examples." },
-    { id: 3, title: "Chemistry", description: "Learn A-Level Chemistry with interactive lessons and exercises." },
-    { id: 4, title: "Biology", description: "Complete A-Level Biology course covering all essential topics." },
-  ];
-
   return (
-    <div>
+    <div className="bg-lightPurple min-h-screen">
+
       {/* Hero Section */}
-      <section className="bg-blue-600 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Welcome to Homebridge Clone</h1>
-          <p className="text-lg md:text-xl mb-6">
-            Your platform for top-notch online A-Level education.
+      <section className="bg-primary text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+            Welcome to Homebridge Clone
+          </h1>
+          <p className="text-lg sm:text-xl mb-8">
+            Explore courses, learn new skills, and grow your career with us.
           </p>
-          <button className="bg-white text-blue-600 font-semibold px-6 py-3 rounded shadow hover:bg-gray-100">
-            Explore Courses
-          </button>
+          <Link
+            to="/courses"
+            className="bg-secondary hover:bg-white hover:text-primary text-white px-6 py-3 rounded-lg font-semibold transition"
+          >
+            Browse Courses
+          </Link>
         </div>
       </section>
 
-      {/* Courses Section */}
-      <section className="py-16 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Our Courses</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {courses.map(course => (
-              <div key={course.id} className="bg-white rounded shadow p-6 hover:shadow-lg transition">
-                <h3 className="text-xl font-semibold mb-2">{course.title}</h3>
-                <p className="text-gray-700">{course.description}</p>
-                <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-                  Learn More
-                </button>
-              </div>
-            ))}
+      {/* Feature Cards */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center text-primary mb-12">
+            Our Services
+          </h2>
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition">
+              <h3 className="text-xl font-semibold mb-2 text-primary">Online Courses</h3>
+              <p className="text-gray-700">
+                Access a variety of courses to learn at your own pace.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition">
+              <h3 className="text-xl font-semibold mb-2 text-primary">Expert Instructors</h3>
+              <p className="text-gray-700">
+                Learn from industry experts and gain practical knowledge.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition">
+              <h3 className="text-xl font-semibold mb-2 text-primary">Certifications</h3>
+              <p className="text-gray-700">
+                Earn certificates to showcase your skills and achievements.
+              </p>
+            </div>
+
           </div>
         </div>
       </section>
+
+      {/* Call-to-Action Section */}
+      <section className="bg-primary text-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold mb-6">Start Learning Today!</h2>
+          <p className="mb-8">
+            Join thousands of students who are building their careers with us.
+          </p>
+          <Link
+            to="/contact"
+            className="bg-secondary hover:bg-white hover:text-primary px-6 py-3 rounded-lg font-semibold transition"
+          >
+            Contact Us
+          </Link>
+        </div>
+      </section>
+
     </div>
   );
 }
