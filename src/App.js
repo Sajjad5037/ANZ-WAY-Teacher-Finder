@@ -13,6 +13,11 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 
 function App() {
+    // Set the document title
+  useEffect(() => {
+    document.title = 'ANZWAY Teacher Finder';
+  }, []); // Empty dependency array ensures this runs once on mount
+  
   return (
     <Router>
       {/* Navbar */}
