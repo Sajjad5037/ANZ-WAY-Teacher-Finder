@@ -1,199 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ANZWAY Teacher Finder</title>
-  <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.development.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.development.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/react-router-dom@6.4.3/dist/umd/react-router-dom.development.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/@babel/standalone@7.20.6/Babel.js"></script>
-</head>
-<body class="flex flex-col min-h-screen bg-gray-100">
-  <div id="root"></div>
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-  <script type="text/babel">
-    const { useEffect } = React;
-    const { BrowserRouter: Router, Routes, Route } = ReactRouterDOM;
+// Components
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
-    // Placeholder components (replace with actual implementations)
-    const Navbar = () => (
-      <nav className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg sticky top-0 z-50 transition-all duration-300">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <a href="/" className="text-2xl font-bold hover:text-indigo-200 transition-colors">ANZWAY</a>
-          <div className="space-x-6">
-            <a href="/" className="hover:text-indigo-200 transition-colors">Home</a>
-            <a href="/teachers" className="hover:text-indigo-200 transition-colors">Teachers</a>
-            <a href="/about" className="hover:text-indigo-200 transition-colors">About</a>
-            <a href="/contact" className="hover:text-indigo-200 transition-colors">Contact</a>
-            <a href="/dashboard" className="hover:text-indigo-200 transition-colors">Dashboard</a>
-          </div>
-        </div>
-      </nav>
-    );
+// Pages
+import Home from './pages/Home';
+import Teachers from './pages/Teachers';
+import TeacherRegistration from './pages/TeacherRegistration';
+import TeacherLogin from './pages/TeacherLogin';
+import StudentRegistration from './pages/StudentRegistration';
+import StudentLogin from './pages/StudentLogin';
+import Dashboard from './pages/Dashboard';
+import About from './pages/About';
+import Contact from './pages/Contact';
 
-    const Footer = () => (
-      <footer className="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-8 mt-auto">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-sm">&copy; {new Date().getFullYear()} ANZWAY Teacher Finder. All rights reserved.</p>
-          <div className="mt-4 space-x-4">
-            <a href="/about" className="hover:text-indigo-300 transition-colors">About</a>
-            <a href="/contact" className="hover:text-indigo-300 transition-colors">Contact</a>
-            <a href="/privacy" className="hover:text-indigo-300 transition-colors">Privacy Policy</a>
-          </div>
-        </div>
+function App() {
+  // Set the document title on mount
+  useEffect(() => {
+    document.title = 'ANZWAY Teacher Finder';
+  }, []);
+
+  return (
+    <Router>
+      {/* Navbar */}
+      <header className="sticky top-0 z-50 bg-white shadow-md">
+        <Navbar />
+      </header>
+
+      {/* Main Content */}
+      <main className="bg-lightPurple min-h-screen flex flex-col">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/teachers" element={<Teachers />} />                  {/* Browse teachers */}
+          <Route path="/register-teacher" element={<TeacherRegistration />} />
+          <Route path="/teacher-login" element={<TeacherLogin />} />
+          <Route path="/register-student" element={<StudentRegistration />} /> {/* New student signup */}
+          <Route path="/student-login" element={<StudentLogin />} />         {/* New student login */}
+          <Route path="/dashboard" element={<Dashboard />} />               {/* Dashboard for logged-in users */}
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-secondary text-white mt-auto">
+        <Footer />
       </footer>
-    );
+    </Router>
+  );
+}
 
-    const Home = () => <div className="container mx-auto px-4 py-12 text-center"><h1 className="text-4xl font-bold text-indigo-600">Welcome to ANZWAY</h1><p className="mt-4 text-gray-600">Find the best teachers for your learning journey.</p></div>;
-    const Teachers = () => <div className="container mx-auto px-4 py-12"><h2 className="text-3xl font-semibold text-indigo-600">Browse Teachers</h2></div>;
-    const TeacherRegistration = () => <div className="container mx-auto px-4 py-12"><h2 className="text-3xl font-semibold text-indigo-600">Teacher Registration</h2></div>;
-    const TeacherLogin = () => <div className="container mx-auto px-4 py-12"><h2 className="text-3xl font-semibold text-indigo-600">Teacher Login</h2></div>;
-    const StudentRegistration = () => <div className="container mx-auto px-4 py部分
-
-System: Thank you for sharing the code! To improve the aesthetic appeal of the page generated by this React `App` component, I've provided an updated version wrapped in a single-page HTML file that incorporates Tailwind CSS for modern, responsive styling. The enhancements include:
-
-1. A sleek, gradient-styled navbar with a sticky effect and smooth hover transitions.
-2. A consistent, modern color scheme using indigo and purple tones for a professional look.
-3. A responsive layout with proper spacing and a sticky footer that stays at the bottom of the page.
-4. Subtle animations for hover effects and transitions to enhance user experience.
-5. A clean, minimal background with `bg-gray-100` for better contrast and readability.
-
-The updated code is provided in a single `index.html` file, assuming Tailwind CSS is integrated via CDN. Placeholder components for `Home`, `Teachers`, `TeacherRegistration`, `TeacherLogin`, `StudentRegistration`, `StudentLogin`, `Dashboard`, `About`, and `Contact` are included with basic content to demonstrate the layout. You can replace these with your actual component implementations.
-
-<xaiArtifact artifact_id="6807bfe4-6182-4c05-825c-b08f50d7a22b" artifact_version_id="27dbc7d1-6e6b-4c55-9d1a-0aa2dd9b47ff" title="index.html" contentType="text/html">
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ANZWAY Teacher Finder</title>
-  <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.development.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.development.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/react-router-dom@6.4.3/dist/umd/react-router-dom.development.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/@babel/standalone@7.20.6/Babel.js"></script>
-</head>
-<body class="flex flex-col min-h-screen bg-gray-100">
-  <div id="root"></div>
-
-  <script type="text/babel">
-    const { useEffect } = React;
-    const { BrowserRouter: Router, Routes, Route } = ReactRouterDOM;
-
-    // Placeholder components
-    const Navbar = () => (
-      <nav className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg sticky top-0 z-50 transition-all duration-300">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <a href="/" className="text-2xl font-bold hover:text-indigo-200 transition-colors">ANZWAY</a>
-          <div className="space-x-6">
-            <a href="/" className="hover:text-indigo-200 transition-colors">Home</a>
-            <a href="/teachers" className="hover:text-indigo-200 transition-colors">Teachers</a>
-            <a href="/about" className="hover:text-indigo-200 transition-colors">About</a>
-            <a href="/contact" className="hover:text-indigo-200 transition-colors">Contact</a>
-            <a href="/dashboard" className="hover:text-indigo-200 transition-colors">Dashboard</a>
-          </div>
-        </div>
-      </nav>
-    );
-
-    const Footer = () => (
-      <footer className="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-8 mt-auto">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-sm">&copy; {new Date().getFullYear()} ANZWAY Teacher Finder. All rights reserved.</p>
-          <div className="mt-4 space-x-4">
-            <a href="/about" className="hover:text-indigo-300 transition-colors">About</a>
-            <a href="/contact" className="hover:text-indigo-300 transition-colors">Contact</a>
-            <a href="/privacy" className="hover:text-indigo-300 transition-colors">Privacy Policy</a>
-          </div>
-        </div>
-      </footer>
-    );
-
-    const Home = () => (
-      <div className="container mx-auto px-4 py-12 text-center">
-        <h1 className="text-4xl font-bold text-indigo-600">Welcome to ANZWAY</h1>
-        <p className="mt-4 text-gray-600">Find the best teachers for your learning journey.</p>
-      </div>
-    );
-    const Teachers = () => (
-      <div className="container mx-auto px-4 py-12">
-        <h2 className="text-3xl font-semibold text-indigo-600">Browse Teachers</h2>
-      </div>
-    );
-    const TeacherRegistration = () => (
-      <div className="container mx-auto px-4 py-12">
-        <h2 className="text-3xl font-semibold text-indigo-600">Teacher Registration</h2>
-      </div>
-    );
-    const TeacherLogin = () => (
-      <div className="container mx-auto px-4 py-12">
-        <h2 className="text-3xl font-semibold text-indigo-600">Teacher Login</h2>
-      </div>
-    );
-    const StudentRegistration = () => (
-      <div className="container mx-auto px-4 py-12">
-        <h2 className="text-3xl font-semibold text-indigo-600">Student Registration</h2>
-      </div>
-    );
-    const StudentLogin = () => (
-      <div className="container mx-auto px-4 py-12">
-        <h2 className="text-3xl font-semibold text-indigo-600">Student Login</h2>
-      </div>
-    );
-    const Dashboard = () => (
-      <div className="container mx-auto px-4 py-12">
-        <h2 className="text-3xl font-semibold text-indigo-600">Dashboard</h2>
-      </div>
-    );
-    const About = () => (
-      <div className="container mx-auto px-4 py-12">
-        <h2 className="text-3xl font-semibold text-indigo-600">About Us</h2>
-      </div>
-    );
-    const Contact = () => (
-      <div className="container mx-auto px-4 py-12">
-        <h2 className="text-3xl font-semibold text-indigo-600">Contact Us</h2>
-      </div>
-    );
-
-    function App() {
-      useEffect(() => {
-        document.title = 'ANZWAY Teacher Finder';
-      }, []);
-
-      return (
-        <Router>
-          <div className="flex flex-col min-h-screen">
-            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
-              <Navbar />
-            </div>
-            <main className="flex-grow bg-gray-100">
-              <div className="container mx-auto px-4 py-8">
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/teachers" element={<Teachers />} />
-                  <Route path="/register-teacher" element={<TeacherRegistration />} />
-                  <Route path="/teacher-login" element={<TeacherLogin />} />
-                  <Route path="/register-student" element={<StudentRegistration />} />
-                  <Route path="/student-login" element={<StudentLogin />} />
-                  <Route path="/dashboard" element={<Dashboard />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/contact" element={<Contact />} />
-                </Routes>
-              </div>
-            </main>
-            <div className="bg-gradient-to-r from-gray-800 to-gray-900 text-white">
-              <Footer />
-            </div>
-          </div>
-        </Router>
-      );
-    }
-
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(<App />);
-  </script>
-</body>
-</html>
+export default App;
