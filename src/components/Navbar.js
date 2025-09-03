@@ -69,7 +69,6 @@ export default function Navbar() {
               </Link>
 
               {/* Desktop Menu */}
-              
               <ul className="hidden md:flex space-x-6 items-center font-poppins">
                 <li>
                   <Link
@@ -81,10 +80,10 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    to="/courses"
+                    to="/teachers"
                     className="px-3 py-2 rounded hover:text-primary-dark font-semibold transition-colors duration-300"
                   >
-                    Courses
+                    Teachers
                   </Link>
                 </li>
                 <li>
@@ -105,14 +104,21 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    to="/why-homebridge"
+                    to="/register-student"
                     className="px-3 py-2 rounded hover:text-primary-dark font-semibold transition-colors duration-300"
                   >
-                    Why ANZWAY
+                    Sign Up
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/student-login"
+                    className="px-3 py-2 rounded hover:text-primary-dark font-semibold transition-colors duration-300"
+                  >
+                    Login
                   </Link>
                 </li>
               </ul>
-
             </div>
 
             {/* Mobile Menu Button */}
@@ -161,10 +167,10 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                to="/courses"
+                to="/teachers"
                 className="block px-3 py-2 rounded hover:bg-gray-100 font-bold transition-colors duration-300"
               >
-                Courses
+                Teachers
               </Link>
             </li>
             <li>
@@ -181,6 +187,22 @@ export default function Navbar() {
                 className="block px-3 py-2 rounded hover:bg-gray-100 font-bold transition-colors duration-300"
               >
                 Contact
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/register-student"
+                className="block px-3 py-2 rounded hover:bg-gray-100 font-bold transition-colors duration-300"
+              >
+                Sign Up
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/student-login"
+                className="block px-3 py-2 rounded hover:bg-gray-100 font-bold transition-colors duration-300"
+              >
+                Login
               </Link>
             </li>
           </ul>
